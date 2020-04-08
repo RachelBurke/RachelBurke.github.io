@@ -1,0 +1,10 @@
+# binaries
+bin/
+dist/
+lib/
+
+# editors
+.vscode/
+
+# packages
+node_modules/
