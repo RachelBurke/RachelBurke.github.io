@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "http://rachelburke.github.io/",
   "scripts": {
     "start": "webpack-dev-server --open --mode development",
     "build": "webpack --mode production",
+    "deploy": "gh-pages -d dist",
     "lint": "eslint src/*/*.js",
     "lint:fix": "eslint src/*/*.js --fix"
   },
@@ -38,6 +40,7 @@
     "carbon-components-react": "^7.10.3",
     "carbon-icons": "^7.0.7",
     "font-awesome": "^4.7.0",
+    "gh-pages": "^2.2.0",
     "node-sass": "^4.13.1",
     "prettier": "^2.0.4",
     "react": "^16.13.1",
