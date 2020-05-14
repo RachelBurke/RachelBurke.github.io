@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {useLocation} from 'react-router-dom';
 import NavLinks from './NavLinks';
 import NavMenu from './NavMenu';
-import resume from '../../../public/Resume.pdf';
+import resume from '../../../../public/Resume.pdf';
 
 const NavBar = ({user}) => {
   const location = useLocation();

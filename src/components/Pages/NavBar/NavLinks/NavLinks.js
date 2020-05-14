@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import resume from '../../../public/Resume.pdf';
+import resume from '../../../../../public/Resume.pdf';
 
 const items = [
   {name: 'Home', path: '/'},

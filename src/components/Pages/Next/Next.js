@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
-import resume from '../../../public/Resume.pdf';
+import resume from '../../../../public/Resume.pdf';
 
 const Next = ({isHome, to}) =>
   to != '/resume' ? (
