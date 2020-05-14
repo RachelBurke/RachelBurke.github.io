@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
 import Layout from './Layout';
+import resume from '../../../public/Resume.pdf';
 
 const Home = ({user}) => (
   <Layout user={user} isHome={true} to={'/about'}>
@@ -19,7 +20,7 @@ const Home = ({user}) => (
           <Link to='/projects' className='home-button'>
             Projects
           </Link>
-          <a href='../../../public/Resume.pdf' className='home-button'>
+          <a href={resume} className='home-button'>
             Resume
           </a>
         </div>

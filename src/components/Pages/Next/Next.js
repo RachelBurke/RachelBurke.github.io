@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
+import resume from '../../../public/Resume.pdf';
 
 const Next = ({isHome, to}) =>
   to != '/resume' ? (
@@ -8,7 +9,7 @@ const Next = ({isHome, to}) =>
       <i className='fa fa-chevron-right'></i>
     </Link>
   ) : (
-    <a href='../../../public/Resume.pdf' className='continue-button'>
+    <a href={resume} className='continue-button'>
       <i className='fa fa-chevron-right'></i>
     </a>
   );

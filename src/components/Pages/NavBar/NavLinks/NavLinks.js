@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import resume from '../../../public/Resume.pdf';
 
 const items = [
   {name: 'Home', path: '/'},
@@ -24,7 +25,7 @@ const NavLinks = () => (
           </li>
         );
       })}
-      <a href='../../../public/Resume.pdf' className='sidebar-link'>
+      <a href={resume} className='sidebar-link'>
         Resume
       </a>
     </ul>

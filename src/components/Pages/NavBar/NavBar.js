@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import {useLocation} from 'react-router-dom';
 import NavLinks from './NavLinks';
 import NavMenu from './NavMenu';
+import resume from '../../../public/Resume.pdf';
 
 const NavBar = ({user}) => {
   const location = useLocation();
@@ -27,10 +28,7 @@ const NavBar = ({user}) => {
                 {user.basics.name} <i className='fa fa-github'></i>
               </a>
             </h2>
-            <a
-              className='info'
-              href={`../../../public/Resume.pdf`}
-              target='_blank'>
+            <a className='info' href={resume} target='_blank'>
               <p>
                 <i className='fa fa-user'></i> {user.basics.headline}
               </p>
