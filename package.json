@@ -3,11 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage": "http://rachelburke.github.io/",
+  "homepage": "http://rachelburke.github.io/rachelburke.github.io",
   "scripts": {
     "start": "webpack-dev-server --open --mode development",
     "build": "webpack --mode production",
-    "deploy": "gh-pages -d dist",
+    "deploy": "gh-pages --dist dist --branch master",
     "lint": "eslint src/*/*.js",
     "lint:fix": "eslint src/*/*.js --fix"
   },
