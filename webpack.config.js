@@ -2,7 +2,6 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  entry: './src',
   module: {
     rules: [
       {
@@ -35,7 +34,7 @@ module.exports = {
         use: ['file-loader'],
       },
       {
-        test: /\.(png|svg|jpg|gif|pdf)$/,
+        test: /\.(png|svg|jpg|gif)$/,
         use: ['file-loader'],
       },
     ],
