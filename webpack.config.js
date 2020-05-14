@@ -1,6 +1,8 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
+  entry: './src',
   module: {
     rules: [
       {
@@ -33,7 +35,7 @@ module.exports = {
         use: ['file-loader'],
       },
       {
-        test: /\.(png|svg|jpg|gif)$/,
+        test: /\.(png|svg|jpg|gif|pdf)$/,
         use: ['file-loader'],
       },
     ],
@@ -46,5 +48,6 @@ module.exports = {
       template: './public/index.html',
       filename: './index.html',
     }),
+    new CopyWebpackPlugin([{from: 'public'}]),
   ],
 };
