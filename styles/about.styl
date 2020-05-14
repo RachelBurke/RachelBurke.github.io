@@ -1,0 +1,41 @@
+.about-main {
+    display: flex;
+    margin: 50px 0px 20px 0px;
+    height: 90vh
+    animation: cd-bounce-2-inverse .6s;
+
+    h3 {
+        margin: 0;
+    }
+}
+
+.about {
+    margin: 10px 0px 0px 50px;
+    padding-right: 100px;
+    width: 600px
+    color: #232323;
+    
+    p {
+        line-height: 1.4em;
+    }    
+}
+
+.professional-photo {
+    height: 490px;
+    width: 355px;
+    border: 5px solid white; 
+    display: inline-block;
+    overflow: hidden;
+    box-shadow: 2px 2px 4px #555555;
+
+    @media screen and (max-width: 1024px){
+        border: 2px solid white; 
+        height: 50px;
+        width: 50px;
+    }
+
+    img {
+        transform: scale(.5) translate(-340px, -480px);
+    }
+}
+

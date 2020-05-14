@@ -1,0 +1,173 @@
+@import '../node_modules/font-awesome/css/font-awesome.min.css'; 
+@import '../node_modules/react-vertical-timeline-component/style.min.css';
+@import loading;
+@import navigation;
+@import home;
+@import about;
+@import timeline;
+@import project;
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+    font-stretch: condensed;
+    overflow-x: hidden;
+}
+
+body {
+  background-color: #CCCCCC;
+}
+
+.background-indy {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+.background-indy::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-image:  url('../public/images/indianapolis.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  opacity: .65;
+  z-index: -1;
+  -webkit-filter: grayscale(100%);
+}
+
+.layout {
+  display:flex;
+  flex-direction: column;
+  position: absolute;
+  color: #232323;
+  margin: 0px 0px 0px 25%;
+  padding: 0px 0px 0px 60px;
+  width: 75%;
+
+  h1 {
+      font-size: 3em;
+      font-weight: 500;
+      margin: 0px 0px 10px 0px;
+  }
+
+  h2 {
+      font-size: 2em;
+      font-weight: 500;
+      margin: 0px 0px 10px 0px;
+  }
+
+
+  @media screen and (max-width: 1024px){
+      padding: 80px 00px 0px 20px;
+      margin: 0px;
+      width: 100%
+  }
+
+  @media screen and (max-width: 400px) {
+    width: 100%
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+  }
+}
+
+.next-button {
+  width: 50px;
+  right: 0;
+  position: absolute;
+  transform:translateY(550%);
+  color: white;
+  font-size: 3em;
+
+  @media screen and (max-width: 1024px){
+      display: none;
+  }
+}
+.next-button:hover {
+  color: rgb(86,118,163);
+
+  i {
+    text-shadow: 0px 2px 2px 0px rgba(0,0,0,.75)
+
+    @media screen and (max-width: 1024px){
+        display: none;
+    }
+  }
+
+  @media screen and (max-width: 1024px){
+      display: none;
+  }
+}
+
+.continue-button {
+  align-self: right;
+  right: 10;
+  width: 40px;
+  right: 0;
+  position: fixed;
+  transform:translateY(50vh);
+  color: #232323;
+  font-size: 3em;
+
+  @media screen and (max-width: 1024px){
+      display: none;
+  }
+}
+.continue-button:hover {
+  color: rgb(86,118,163);
+
+  i {
+    text-shadow: 0px 2px 2px 0px rgba(0,0,0,.75)
+
+    @media screen and (max-width: 1024px){
+        display: none;
+    }
+  }
+
+  @media screen and (max-width: 1024px){
+      display: none;
+  }
+}
+
+.about-navigation {
+  display: flex;
+  list-style: none;
+  position: absolute;
+  left: 50%;
+  bottom: 5px;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+}
+.about-link {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color:  #232323;
+    display: block;
+    transition: 0.3s;    
+
+    a {
+        color:  #232323;
+    }
+}
+.about-link:hover {
+    color: rgb(86,118,163);
+    a {
+        color:  rgb(86,118,163);
+    }
+}
