@@ -1,38 +1,32 @@
 import React from 'react';
-import {useLocation} from 'react-router-dom';
 import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
 import Layout from './Layout';
 
-const Home = ({user}) => {
-  const location = useLocation();
-  const checked = location.pathname == '/';
-
-  return (
-    <Layout user={user} isHome={true} to={'/about'}>
-      <div className='home-main'>
-        <div>
-          <h1>Hey, I'm Rachel!</h1>
-          <h2>I'm a software developer from Indianapolis.</h2>
-          <div className='home-buttons'>
-            <Link to='/about' className='home-button'>
-              About
-            </Link>
-            <Link to='/experience' className='home-button'>
-              Experience
-            </Link>
-            <Link to='/projects' className='home-button'>
-              Projects
-            </Link>
-            <a href='../../../public/Resume.pdf' className='home-button'>
-              Resume
-            </a>
-          </div>
+const Home = ({user}) => (
+  <Layout user={user} isHome={true} to={'/about'}>
+    <div className='home-main'>
+      <div>
+        <h1>Hey, I&apos;m Rachel!</h1>
+        <h2>I&apos;m a software developer from Indianapolis.</h2>
+        <div className='home-buttons'>
+          <Link to='/about' className='home-button'>
+            About
+          </Link>
+          <Link to='/experience' className='home-button'>
+            Experience
+          </Link>
+          <Link to='/projects' className='home-button'>
+            Projects
+          </Link>
+          <a href='../../../public/Resume.pdf' className='home-button'>
+            Resume
+          </a>
         </div>
       </div>
-    </Layout>
-  );
-};
+    </div>
+  </Layout>
+);
 
 Home.propTypes = {
   user: PropTypes.shape({

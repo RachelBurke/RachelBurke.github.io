@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
 import {Menu, MenuItem} from '@material-ui/core';
 
@@ -36,5 +37,17 @@ const NavMenu = ({open, anchorEl, handleOpen}) => (
     </MenuItem>
   </Menu>
 );
+
+NavMenu.propTypes = {
+  open: PropTypes.bool,
+  anchorEl: PropTypes.any,
+  handleOpen: PropTypes.func,
+};
+
+NavMenu.defaultProps = {
+  open: false,
+  anchorEl: null,
+  handleOpen: () => null,
+};
 
 export default NavMenu;

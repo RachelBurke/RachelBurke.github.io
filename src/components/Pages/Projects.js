@@ -71,7 +71,7 @@ const Projects = ({user}) => {
           <ul className='project-navigation'>
             {user.projects.map((project, i) => (
               <li key={i} className={getClass(project.languages)}>
-                <div class='header-row'>
+                <div className='header-row'>
                   <h4>
                     <a
                       className='projects-header'
@@ -108,6 +108,31 @@ const Projects = ({user}) => {
 
 Projects.propTypes = {
   user: PropTypes.shape({
+    basics: PropTypes.shape({
+      name: PropTypes.string,
+      picture: PropTypes.string,
+      label: PropTypes.string,
+      headline: PropTypes.string,
+      summary: PropTypes.string,
+      website: PropTypes.string,
+      blog: PropTypes.string,
+      yearsOfExperience: PropTypes.number,
+      id: PropTypes.string,
+      username: PropTypes.string,
+      email: PropTypes.string,
+      region: PropTypes.string,
+      location: PropTypes.object,
+      phone: PropTypes.string,
+      followers: PropTypes.number,
+      following: PropTypes.number,
+      profiles: PropTypes.arrayOf(
+        PropTypes.shape({
+          network: PropTypes.string,
+          username: PropTypes.string,
+          url: PropTypes.string,
+        })
+      ),
+    }),
     projects: PropTypes.arrayOf(
       PropTypes.shape({
         name: PropTypes.string,
@@ -127,6 +152,9 @@ Projects.propTypes = {
 
 Projects.defaultProps = {
   user: PropTypes.shape({
+    basics: PropTypes.shape({
+      username: '',
+    }),
     projects: PropTypes.arrayOf(
       PropTypes.shape({
         name: '',
