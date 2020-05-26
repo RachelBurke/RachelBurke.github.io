@@ -48,7 +48,7 @@ const Experience = ({user}) => {
   experiences.sort((a, b) => (b.end || b.start + 1) - (a.end || a.start + 1));
 
   return (
-    <Layout user={user} isHome={false} to={'/projects'}>
+    <Layout user={user} isHome={false}>
       <div className='experience-main'>
         <VerticalTimeline>
           {experiences.map((experience, i) => {
@@ -111,6 +111,27 @@ Experience.propTypes = {
         activities: PropTypes.string,
         gpa: PropTypes.string,
         courses: PropTypes.array,
+      })
+    ),
+    work: PropTypes.arrayOf(
+      PropTypes.shape({
+        company: PropTypes.string,
+        position: PropTypes.string,
+        website: PropTypes.string,
+        location: PropTypes.string,
+        summary: PropTypes.string,
+        isCurrentRole: PropTypes.bool,
+        startDate: PropTypes.string,
+        endDate: PropTypes.string,
+        start: PropTypes.shape({
+          year: PropTypes.number,
+          month: PropTypes.number,
+        }),
+        end: PropTypes.shape({
+          year: PropTypes.number,
+          month: PropTypes.number,
+        }),
+        highlights: PropTypes.arrayOf(PropTypes.string),
       })
     ),
   }),

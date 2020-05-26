@@ -5,40 +5,39 @@ import Layout from './Layout';
 
 const getIcon = name => {
   switch (name) {
-    case 'JavaScript':
-      return <i className='fab fa-js'></i>;
-    case 'CSS':
-      return <i className='fab fa-css3'></i>;
-    case 'HTML':
-      return <i className='fab fa-html5'></i>;
-    case 'Java':
-      return <i className='fab fa-java'></i>;
-    case 'React':
-      return <i className='fab fa-react'></i>;
-    default:
-      return name;
+  case 'JavaScript':
+    return <i className='fab fa-js'></i>;
+  case 'CSS':
+    return <i className='fab fa-css3'></i>;
+  case 'HTML':
+    return <i className='fab fa-html5'></i>;
+  case 'Java':
+    return <i className='fab fa-java'></i>;
+  case 'React':
+    return <i className='fab fa-react'></i>;
+  default:
+    return name;
   }
 };
 
 const getClass = languages => {
   let language = 'default';
   languages.map(name => {
-    console.log(name);
     switch (name) {
-      case 'JavaScript':
-        language = 'js';
-        return;
-      case 'Java':
-        language = 'java';
-        return;
-      case 'C#':
-        language = 'cs';
-        return;
-      case 'C++':
-        language = 'cpp';
-        return;
-      default:
-        return;
+    case 'JavaScript':
+      language = 'js';
+      return;
+    case 'Java':
+      language = 'java';
+      return;
+    case 'C#':
+      language = 'cs';
+      return;
+    case 'C++':
+      language = 'cpp';
+      return;
+    default:
+      return;
     }
   });
   return language;
@@ -54,7 +53,7 @@ const Projects = ({user}) => {
   );
 
   return (
-    <Layout user={user} isHome={false} to={'/resume'}>
+    <Layout user={user} isHome={false}>
       <div className='project-main'>
         <a
           className='projects-header'

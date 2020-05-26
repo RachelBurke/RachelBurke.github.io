@@ -1,17 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import NavBar from './NavBar';
-import Next from './Next';
 import Footer from './Footer';
 
-const Layout = ({user, isHome, to, children}) => (
+const Layout = ({user, isHome, children}) => (
   <div id='background' className={isHome ? 'background-indy' : 'background'}>
     <NavBar user={user} />
     <div className='layout'>
       {children}
       {!isHome && <Footer user={user} />}
     </div>
-    <Next to={to} />
   </div>
 );
 
@@ -107,10 +105,14 @@ Layout.propTypes = {
       })
     ),
   }),
+  isHome: PropTypes.bool,
+  children: PropTypes.node,
 };
 
 Layout.defaultProps = {
   user: {},
+  isHome: false,
+  children: <div />
 };
 
 export default Layout;

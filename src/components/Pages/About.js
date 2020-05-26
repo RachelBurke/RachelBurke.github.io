@@ -4,13 +4,13 @@ import Layout from './Layout';
 import professionalPhoto from '../../../public/images/professional_picture.jpg';
 
 const About = ({user}) => (
-  <Layout user={user} isHome={false} to={'/experience'}>
+  <Layout user={user} isHome={false}>
     <div className='about-main'>
       <div id='professional' className='professional-photo'>
         <img src={professionalPhoto} alt='professional-photo' />
       </div>
       <div className='about'>
-        <h3>Hey, I'm Rachel!</h3>
+        <h3>Hey, I&apos;m Rachel!</h3>
         {user.basics.summary.split('\n').map((item, key) => (
           <p key={key}>
             {item}

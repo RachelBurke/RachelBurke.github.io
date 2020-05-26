@@ -5,7 +5,7 @@ import Layout from './Layout';
 import resume from '../../../public/Resume.pdf';
 
 const Home = ({user}) => (
-  <Layout user={user} isHome={true} to={'/about'}>
+  <Layout user={user} isHome={true}>
     <div className='home-main'>
       <div>
         <h1>Hey, I&apos;m Rachel!</h1>
